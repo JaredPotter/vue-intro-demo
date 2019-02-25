@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>Manual DOM Manipulation</h1>
+        <div>When the input text box changes, it triggers an event. In the event callback function we set the message to match the input.</div>
+        <br>
+        <div>Message: <span class="message"></span></div>
+        <input type="text" class="message-input">
+    </body>
+</html>
+
+<script>
+    let inputElement = document.querySelector('.message-input');
+    inputElement.value = '';
+
+    inputElement.addEventListener('input', function(event) {
+        console.log('Event Called!')
+
+        let messageElement =  document.querySelector('.message');
+        messageElement.innerHTML = event.target.value;
+    });
+</script>
