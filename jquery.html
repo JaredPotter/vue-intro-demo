@@ -1,3 +1,8 @@
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
 <html>
     <body>
         <h1>jQuery DOM Manipulation</h1>
@@ -8,10 +13,6 @@
     </body>
 </html>
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
 
 <script>
     let inputElement = $('.message-input');
@@ -19,6 +20,7 @@
 
     $('.message-input').on('input', function() { 
         console.log('Event Called!')
+        
         let messageElement =  $('.message')[0];
         messageElement.innerHTML = $(this).val();
     });
