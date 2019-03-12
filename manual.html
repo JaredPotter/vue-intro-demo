@@ -15,7 +15,8 @@
     inputElement.addEventListener('input', function(event) {
         console.log('Event Called!')
 
+        let newValue = event.target.value;
         let messageElement =  document.querySelector('.message');
-        messageElement.innerHTML = event.target.value;
+        messageElement.innerHTML = newValue;
     });
 </script>
