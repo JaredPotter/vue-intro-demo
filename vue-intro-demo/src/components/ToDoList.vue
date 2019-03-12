@@ -5,7 +5,12 @@
             <input type="text" id="newToDoItem" v-model="currentNewToDoItem" v-on:keyup.enter="addToList()">
             <button v-on:click="addToList()">Add Item</button>
         </div>
-        <ToDoItem v-for="(item, index) in list" :key="index" :value="item" v-on:deleteToDoItem="deleteToDoItem($event)"/>
+        <ToDoItem 
+            v-for="(item, index) in list" 
+            :key="index" 
+            :value="item" 
+            v-on:deleteToDoItem="deleteToDoItem($event)"
+        />
     </div>
 </template>
 
@@ -29,7 +34,6 @@ export default {
 
             if(value) {
                 this.list.push(value);
-
             }
 
             this.currentNewToDoItem = '';

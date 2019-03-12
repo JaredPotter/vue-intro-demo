@@ -17,12 +17,12 @@
     let inputElement = $('.message-input');
     inputElement.value = '';
 
-    $('.message-input').on('input', function() { 
+    inputElement.on('input', function() { 
         console.log('Event Called!')
 
         let newValue = $(this).val();
         
-        let messageElement =  $('.message')[0];
-        messageElement.innerHTML = newValue;
+        let messageElement =  $('.message');
+        messageElement.html(newValue);
     });
 </script>

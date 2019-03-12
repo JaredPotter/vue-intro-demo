@@ -20,13 +20,15 @@ export default {
     computed: {
         taxAmount() {
             let subtotal = parseFloat(this.subtotal);
+            let taxAmount = subtotal * this.taxRate;
 
-            return subtotal * this.taxRate;
+            return taxAmount;
         },
         total() {
             let subtotal = parseFloat(this.subtotal);
-
-            return subtotal + this.taxAmount;
+            let total = subtotal + this.taxAmount;
+            
+            return total;
         },
     },
     filters: {

@@ -4,8 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/twoWayBinding">2 - Way Binding</router-link> |
       <router-link to="/computedProperties">Computed Properties & Filters</router-link> |
-      <router-link to="/vuex">Vuex</router-link> |
-      <router-link to="/todo">ToDo List</router-link>
+      <router-link to="/todo">ToDo List</router-link> |
+      <router-link to="/vuex">Vuex</router-link>
     </div>
     <router-view/>
   </div>

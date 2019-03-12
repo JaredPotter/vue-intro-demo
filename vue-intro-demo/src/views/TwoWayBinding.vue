@@ -56,7 +56,7 @@ export default {
             if(vueRef.counterIsRunning) {
                 vueRef.count += 1;
             }
-        }, 1000);        
+        }, 1000);
     }
 }
 </script>
@@ -84,5 +84,4 @@ export default {
         font-size: 16px;
     }    
 }
-
 </style>
