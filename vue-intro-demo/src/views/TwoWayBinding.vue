@@ -40,8 +40,6 @@ export default {
         },
         startCounter() {
             this.counterIsRunning = true;
-
-
         },
         stopCounter() {
             this.counterIsRunning = false;
@@ -50,7 +48,7 @@ export default {
     mounted() {
         // Inside any inline/callback functions, 'this' no longer represents the Vue instance. 
         // Thus, we have to create a reference the Vue instance like this.
-        let vueRef = this; 
+        let vueRef = this;
 
         setInterval(() => { 
             if(vueRef.counterIsRunning) {
