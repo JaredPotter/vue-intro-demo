@@ -1,6 +1,6 @@
 <html>
     <body>
-        <h1>Manual DOM Manipulation</h1>
+        <h1>Native DOM Manipulation</h1>
         <div>When the input text box changes, it triggers an event. In the event callback function we set the message to match the input.</div>
         <br>
         <div>Message: <span class="message"></span></div>
@@ -9,14 +9,13 @@
 </html>
 
 <script>
-    let inputElement = document.querySelector('.message-input');
-    inputElement.value = '';
+    const inputElement = document.querySelector('.message-input');
 
     inputElement.addEventListener('input', function(event) {
-        console.log('Event Called!');
+        console.log('Input Change!');
 
-        let newValue = event.target.value;
-        let messageElement =  document.querySelector('.message');
-        messageElement.innerHTML = newValue;
+        const newValue = event.target.value;
+        const messageElement = document.querySelector('.message');
+        messageElement.textContent = newValue;
     });
 </script>

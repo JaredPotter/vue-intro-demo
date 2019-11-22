@@ -6,7 +6,7 @@
 <html>
     <body>
         <h1>jQuery DOM Manipulation</h1>
-        <div>One of jQeury's one-liners is <i>jQuery: The Write Less, Do More, JavaScript Library</i>. Just like in the other manual DOM manipulation, when the input text box changes, it triggers an event. In the event callback function we set the message to match the input.</div>
+        <div><i>jQuery: The Write Less, Do More, JavaScript Library</i></div>
         <br>
         <div>Message: <span class="message"></span></div>
         <input type="text" class="message-input">
@@ -14,15 +14,14 @@
 </html>
 
 <script>
-    let inputElement = $('.message-input');
-    inputElement.value = '';
+    const inputElement = $('.message-input');
 
     inputElement.on('input', function() { 
         console.log('Event Called!')
 
-        let newValue = $(this).val();
+        const newValue = $(this).val();
         
-        let messageElement =  $('.message');
+        const messageElement =  $('.message');
         messageElement.html(newValue);
     });
 </script>

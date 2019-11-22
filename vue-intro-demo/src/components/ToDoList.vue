@@ -2,8 +2,14 @@
     <div class="to-do-list-container">
         <div class="new-to-do-item">
             <label for="newToDoItem">New ToDo Item:</label>
-            <input type="text" id="newToDoItem" v-model="currentNewToDoItem" v-on:keyup.enter="addToList()">
-            <button v-on:click="addToList()">Add Item</button>
+            <input 
+                type="text" 
+                name="newToDoItem" 
+                v-model="currentNewToDoItem" 
+                v-on:keyup.enter="addToList(currentNewToDoItem)"
+            >
+            <button v-on:click="addToList(currentNewToDoItem)">Add Item</button>
+            <!-- <button @click="addToList()">Add Item</button> -->
         </div>
         <ToDoItem 
             v-for="(item, index) in list" 
@@ -29,11 +35,9 @@ export default {
         };
     },
     methods: {
-        addToList() {
-            let value = this.currentNewToDoItem;
-
-            if(value) {
-                this.list.push(value);
+        addToList(item) {
+            if(item) {
+                this.list.push(item);
             }
 
             this.currentNewToDoItem = '';

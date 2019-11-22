@@ -48,11 +48,11 @@ export default {
     mounted() {
         // Inside any inline/callback functions, 'this' no longer represents the Vue instance. 
         // Thus, we have to create a reference the Vue instance like this.
-        let vueRef = this;
+        let vueInstance = this;
 
         setInterval(() => { 
-            if(vueRef.counterIsRunning) {
-                vueRef.count += 1;
+            if(vueInstance.counterIsRunning) {
+                vueInstance.count += 1;
             }
         }, 1000);
     }
